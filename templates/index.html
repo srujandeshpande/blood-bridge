@@ -117,12 +117,11 @@
         <div class="row justify-content-center">
             <div class="media-container-column col-lg-8" >
                 <!---Formbuilder Form--->
-                <form action="/add_new_user" method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form">
+                <form class="mbr-form form-with-styler" data-form-title="Mobirise Form" id="newDonorForm">
 
                     <div class="row">
                         <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Successfully Registered!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                        </div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Please Try Again!</div>
                     </div>
                     <div class="dragArea row">
                         <div class="col-md-6  form-group" data-for="name">
@@ -142,6 +141,8 @@
                             <input type="text" name="bloodgroup" data-form-field="Blood Group" class="form-control display-7" id="message-form1-8"></textarea>
                         </div>
                         <div class="col-md-12 input-group-btn align-center"><button type="submit" class="btn btn-form btn-secondary display-4">REGISTER AS DONOR</button></div>
+                        <div class="col-md-12 input-group-btn align-center" id="newdonorreset" hidden="hidden"><button type="reset"></button></div>
+
                     </div>
                 </form><!---Formbuilder Form--->
             </div>
@@ -240,7 +241,7 @@
   <script src="{{url_for('static', filename='assets/parallax/jarallax.min.js')}}"></script>
   <script src="{{url_for('static', filename='assets/tether/tether.min.js')}}"></script>
   <script src="{{url_for('static', filename='assets/theme/js/script.js')}}"></script>
-  <!--script src="{{url_for('static', filename='assets/formoid/formoid.min.js')}}"></script-->
+  <script src="{{url_for('static', filename='js/add_new_donor.js')}}"></script>
 
 
 </body>
