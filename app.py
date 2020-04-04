@@ -18,8 +18,12 @@ app.secret_key = b'\xd2(*K\xa0\xa8\x13]g\x1e9\x88\x10\xb0\xe0\xcc'
 #mongo = pymongo.MongoClient('mongodb+srv://srujandeshpande:mongodb@cluster0-e0fen.azure.mongodb.net/test?retryWrites=true&w=majority', maxPoolSize=50, connect=True)
 #db = pymongo.database.Database(mongo, 'covid_v1')
 
-
-#Create Userpage
+#Home page
 @app.route('/')
 def home_page():
+	return render_template('index.html')
+
+#Map page
+@app.route('/map')
+def map_page():
 	return render_template('homepage.html')
