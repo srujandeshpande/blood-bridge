@@ -31,7 +31,7 @@ def map_page():
 #Add new User
 @app.route('/add_new_user', methods=['POST'])
 def add_new_user():
-    inputData = request.form
+    inputData = dict(request.form)
     Donor_Data = pymongo.collection.Collection(db, 'Donor_Data')
     Donor_Data.insert_one(inputData)
     return Response(status=200)
