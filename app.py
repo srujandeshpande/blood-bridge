@@ -15,8 +15,8 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.secret_key = b'\xd2(*K\xa0\xa8\x13]g\x1e9\x88\x10\xb0\xe0\xcc'
 
 #Loads the Database and Collections
-#mongo = pymongo.MongoClient('mongodb+srv://srujandeshpande:mongodb@cluster0-e0fen.azure.mongodb.net/test?retryWrites=true&w=majority', maxPoolSize=50, connect=True)
-#db = pymongo.database.Database(mongo, 'covid_v1')
+mongo = pymongo.MongoClient('mongodb+srv://srujan:mongodb@bloodbridge1-8kivy.gcp.mongodb.net/test?retryWrites=true&w=majority', maxPoolSize=50, connect=True)
+db = pymongo.database.Database(mongo, 'BloodBridge1')
 
 #Home page
 @app.route('/')
