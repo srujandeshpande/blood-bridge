@@ -27,3 +27,11 @@ def home_page():
 @app.route('/map')
 def map_page():
 	return render_template('homepage.html')
+
+#Add new User
+@app.route('/add_new_user', methods=['POST'])
+def add_new_user():
+    inputData = request.form
+    Donor_Data = pymongo.collection.Collection(db, 'Donor_Data')
+    Donor_Data.insert_one(inputData)
+    return Response(status=200)
