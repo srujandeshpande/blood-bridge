@@ -2,6 +2,9 @@
 **The one stop solution connecting blood donors and organizations. https://blood-bridge.herokuapp.com/**  
 Blood Bridge eases the stress on the healthcare industry by making it easy for donors to donate and making sure that those who need blood can easily get it.  
 
+### Built for DSC PESIT Virtual Hack, April 4-5, 2020
+#### Theme: Healthcare
+
 ## Features
 * Blood Bridge connects Prospective Donors with Blood Banks and Donation Camps in their area
 * Blood Bridge allows Blood banks and Hospitals to communicate supply and demand with each other
