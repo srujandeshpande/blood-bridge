@@ -72,7 +72,28 @@ def get_alert():
 		data1["record"+str(y)] = x
 		y+=1
 	data1['count'] = y
-	print(str(data1))
+	return data1
+
+#Add new drive
+@app.route('/add_new_drive', methods=['POST'])
+def add_new_drive():
+	Drive_Data = pymongo.collection.Collection(db, 'Drive_Data')
+	inputData = dict(request.form)
+	Drive_Data.insert_one(inputData)
+	return Response(status=200)
+
+#Get drives
+@app.route('/get_drive', methods=['POST'])
+def get_drive():
+	Drive_Data = pymongo.collection.Collection(db, 'Drive_Data')
+	data = json.loads(dumps(Drive_Data.find()))
+	data1 = {}
+	y = 0
+	data1['count'] = 0
+	for x in data:
+		data1["record"+str(y)] = x
+		y+=1
+	data1['count'] = y
 	return data1
 
 #Org login

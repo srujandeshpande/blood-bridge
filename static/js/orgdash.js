@@ -26,7 +26,7 @@ $(function(){
           data:data,
           success:function(){
               $('#newAlertSuccess').removeAttr('hidden');
-              $('#newAlertForm')[0].reset();
+              $('#newAlert')[0].reset();
           },
           error:function(){
               $('#newAlertFailure').removeAttr('hidden');
@@ -34,5 +34,21 @@ $(function(){
       });
   });
 
+  $('#newDrive').submit(function(e){
+      e.preventDefault();
+      data = $('#newDrive').serialize();
+      $.ajax({
+          url:'/add_new_drive',
+          type:'post',
+          data:data,
+          success:function(){
+              $('#newDriveSuccess').removeAttr('hidden');
+              $('#newDrive')[0].reset();
+          },
+          error:function(){
+              $('#newDriveFailure').removeAttr('hidden');
+          }
+      });
+  });
 
 });
