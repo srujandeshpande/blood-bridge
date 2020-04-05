@@ -4,6 +4,7 @@ $(function(){
       url:'/get_alert',
       type:'post',
       data:"",
+      async: true,
       success:function(msg){
         var count = msg['count'];
         $('#alertcount').html(count);
