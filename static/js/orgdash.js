@@ -15,6 +15,20 @@ $(function(){
   });
 
   $.ajax({
+      url:'/get_donors',
+      type:'post',
+      data:"",
+      async: true,
+      success:function(msg){
+        var count = msg['count'];
+        var r = "record";
+        for (var i=0;i<count;i++){
+          $("#donorTable").append("<tr><td class='body-item mbr-fonts-style display-7'>"+msg[r+i]['name']+"</td><td class='body-item mbr-fonts-style display-7'>"+msg[r+i]['email']+"</td><td class='body-item mbr-fonts-style display-7'>"+msg[r+i]['phone']+"</td><td class='body-item mbr-fonts-style display-7'>"+msg[r+i]['bloodgroup']+"</td></tr>");
+        }
+      }
+  });
+
+  $.ajax({
       url:'/get_drive',
       type:'post',
       data:"",

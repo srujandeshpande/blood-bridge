@@ -96,6 +96,20 @@ def get_drive():
 	data1['count'] = y
 	return data1
 
+#Get donors
+@app.route('/get_donors', methods=['POST'])
+def get_donors():
+	Donor_Data = pymongo.collection.Collection(db, 'Donor_Data')
+	data = json.loads(dumps(Donor_Data.find()))
+	data1 = {}
+	y = 0
+	data1['count'] = 0
+	for x in data:
+		data1["record"+str(y)] = x
+		y+=1
+	data1['count'] = y
+	return data1
+
 #Org login
 @app.route('/org_login', methods=['POST'])
 def org_login():
