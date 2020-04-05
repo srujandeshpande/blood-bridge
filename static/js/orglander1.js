@@ -3,25 +3,31 @@ $(function(){
   $('#newOrgForm').submit(function(e){
       e.preventDefault();
       $.ajax({
-          url:'/add_new_user',
+          url:'/add_new_org',
           type:'post',
-          data:$('#newDonorForm').serialize(),
+          data:$('#newOrgForm').serialize(),
           success:function(){
-              $('.alert-success').removeAttr('hidden');
-              $('#newDonorForm')[0].reset();
+              $('#newOrgSuccess').removeAttr('hidden');
+              $('#newOrgForm')[0].reset();
+          },
+          error:function(){
+              $('#newOrgFailure').removeAttr('hidden');
           }
       });
   });
 
-  $('#newDonorForm').submit(function(e){
+  $('#orgLoginForm').submit(function(e){
       e.preventDefault();
       $.ajax({
-          url:'/add_new_user',
+          url:'/org_login',
           type:'post',
-          data:$('#newDonorForm').serialize(),
+          data:$('#orgLoginForm').serialize(),
           success:function(){
-              $('.alert-success').removeAttr('hidden');
-              $('#newDonorForm')[0].reset();
+              $('#orgLoginSuccess').removeAttr('hidden');
+              $('#orgLoginForm')[0].reset();
+          },
+          error:function(){
+              $('#orgLoginFailure').removeAttr('hidden');
           }
       });
   });

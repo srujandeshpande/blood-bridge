@@ -126,12 +126,11 @@
                 <!---Formbuilder Form--->
                 <form id="orgLoginForm" class="mbr-form form-with-styler" data-form-title="Mobirise Form">
                     <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                        </div>
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12" id="orgLoginSuccess">Successfully Logged in!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12" id="orgLoginFailure">Error! Please try again</div>
                     </div>
                     <div class="dragArea row">
-                        <div class="col-md-4  form-group" data-for="email">
+                        <div class="col-md-6  form-group" data-for="email">
                             <label for="email-form1-l" class="form-control-label mbr-fonts-style display-7">Email</label>
                             <input type="email" name="email" data-form-field="Email" required="required" class="form-control display-7" id="email-form1-l">
                         </div>
@@ -157,8 +156,6 @@
 
     <br>
     <br>
-    <br>
-    <br>
     <div class="container">
         <div class="row justify-content-center">
             <div class="title col-12 col-lg-8">
@@ -174,9 +171,8 @@
                 <!---Formbuilder Form--->
                 <form id="newOrgForm" class="mbr-form form-with-styler">
                     <div class="row">
-
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                        </div>
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12" id="newOrgSuccess">Successfully Registered!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12" id="newOrgFailure">Sorry! Please try again</div>
                     </div>
                     <div class="dragArea row">
                         <div class="col-md-4  form-group" data-for="name">
@@ -191,7 +187,7 @@
                             <label for="phone-form1-e" class="form-control-label mbr-fonts-style display-7">Phone</label>
                             <input type="tel" name="phone" data-form-field="Phone" class="form-control display-7" id="phone-form1-e">
                         </div>
-                        <div data-for="type" class="col-md-8 form-group">
+                        <div data-for="type" class="col-md-4 form-group">
                             <label for="message-form1-e" class="form-control-label mbr-fonts-style display-7">Organization Type</label>
                             <select name="type" data-form-field="Type" class="form-control display-7">
                               <option value="bloodbank">Blood Bank</option>
@@ -199,6 +195,22 @@
                               <option value="ngo">NGO</option>
                               <option value="other">Other</option>
                             </select>
+                        </div>
+                        <div class="col-md-4  form-group" data-for="address">
+                            <label for="address-form1-e" class="form-control-label mbr-fonts-style display-7">Address</label>
+                            <input type="text" name="address" data-form-field="Address" required="required" class="form-control display-7" id="address-form1-e">
+                        </div>
+                        <div class="col-md-4  form-group" data-for="city">
+                            <label for="city-form1-e" class="form-control-label mbr-fonts-style display-7">City</label>
+                            <input type="text" name="city" data-form-field="City" required="required" class="form-control display-7" id="city-form1-e">
+                        </div>
+                        <div class="col-md-4  form-group" data-for="state">
+                            <label for="state-form1-e" class="form-control-label mbr-fonts-style display-7">State</label>
+                            <input type="text" name="state" data-form-field="State" required="required" class="form-control display-7" id="state-form1-e">
+                        </div>
+                        <div class="col-md-4  form-group" data-for="pincode">
+                            <label for="pincode-form1-e" class="form-control-label mbr-fonts-style display-7">Pincode</label>
+                            <input type="number" name="pincode" data-form-field="Pincode" required="required" class="form-control display-7" id="pincode-form1-e">
                         </div>
                         <div class="col-md-4  form-group" data-for="password">
                             <label for="password-form1-e" class="form-control-label mbr-fonts-style display-7">Password</label>

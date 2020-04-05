@@ -40,3 +40,24 @@ def add_new_user():
 @app.route('/org_lander')
 def org_lander():
     return render_template('orglander.html')
+
+#Add new org
+@app.route('/add_new_org', methods=['POST'])
+def add_new_org():
+    Org_Data = pymongo.collection.Collection(db, 'Org_Data')
+    inputData = dict(request.form)
+    for i in json.loads(dumps(Org_Data.find())):
+        if i['email'] == inputData['email']:
+            return Response(status=304)
+    Org_Data.insert_one(inputData)
+    return Response(status=200)
+
+#Org login
+@app.route('/org_login', methods=['POST'])
+def org_login():
+    Org_Data = pymongo.collection.Collection(db, 'Org_Data')
+    inputData = dict(request.form)
+    for i in json.loads(dumps(Org_Data.find())):
+        if i['email'] == inputData['email'] and i['password'] == inputData['password']:
+            return Response(status=200)
+    return Response(status=403)
