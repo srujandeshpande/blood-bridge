@@ -39,4 +39,4 @@ def add_new_user():
 #Org landing page
 @app.route('/org_lander')
 def org_lander():
-    return render_template('page2.html')
+    return render_template('orglander.html')
