@@ -36,7 +36,7 @@ def add_new_user():
     Donor_Data.insert_one(inputData)
     return Response(status=200)
 
-#Add new Org
-@app.route('/add_new_org')
-def add_new_org():
-    return render_template('page1.html')
+#Org landing page
+@app.route('/org_lander')
+def org_lander():
+    return render_template('page2.html')
