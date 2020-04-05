@@ -64,11 +64,16 @@ def add_new_alert():
 @app.route('/get_alert', methods=['POST'])
 def get_alert():
 	Alert_Data = pymongo.collection.Collection(db, 'Alert_Data')
-	inputData = dict(request.form)
-	inputData['email'] = session['email']
-	Alert_Data.insert_one(inputData)
-	return Response(status=200)
-
+	data = json.loads(dumps(Alert_Data.find()))
+	data1 = {}
+	y = 0
+	data1['count'] = 0
+	for x in data:
+		data1["record"+str(y)] = x
+		y+=1
+	data1['count'] = y
+	print(str(data1))
+	return data1
 
 #Org login
 @app.route('/org_login', methods=['POST'])
