@@ -24,5 +24,11 @@ Blood Bridge eases the stress on the healthcare industry by making it easy for d
 * The dashboard also allows organizations to create new blood requirement alerts
 * New Blood Donation Drives can also be created using the dashboard
 
+## Technology Stack
+* Flask and Python used for the Backend
+* Website hosted on Heroku at https://blood-bridge.herokuapp.com/ 
+* Frontend written in HTML, JavaScript and CSS
+* Database used is MongoDB Atlas hosted on Google Cloud Platform (GCP) / Mumbai (asia-south1)  
+
 ## The Idea
 There is a shortage of blood worldwide on normal days itself and during crisises like this current pandemic the shortage is even worse. My idea is to design a platform that allows donors to connect with Blood Banks and Hospitals which are in need of blood and allows Organizations dealing with blood to easily contact each other. Organizations can make their requirements public as to how much blood they need of which group and what type of blood they have in stock. Donors can contact these organizations and volunteer to donate the blood. Other organizations with a surplus of particular blood type can also help out each other. NGOs and Blood Banks hosting Blood Donation Camps can also make them public with the location so interested donors can donate easily.
