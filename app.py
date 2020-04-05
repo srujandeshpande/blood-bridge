@@ -55,32 +55,31 @@ def add_new_org():
 #Add new alert
 @app.route('/add_new_alert', methods=['POST'])
 def add_new_alert():
-    Alert_Data = pymongo.collection.Collection(db, 'Alert_Data')
-    inputData = dict(request.form)
-	inputData['email'] = session['email']
-    Alert_Data.insert_one(inputData)
-    return Response(status=200)
+	Alert_Data = pymongo.collection.Collection(db, 'Alert_Data')
+	inputData = dict(request.form)
+	Alert_Data.insert_one(inputData)
+	return Response(status=200)
 
 #Get alert data
 @app.route('/get_alert', methods=['POST'])
 def get_alert():
-    Alert_Data = pymongo.collection.Collection(db, 'Alert_Data')
-    inputData = dict(request.form)
+	Alert_Data = pymongo.collection.Collection(db, 'Alert_Data')
+	inputData = dict(request.form)
 	inputData['email'] = session['email']
-    Alert_Data.insert_one(inputData)
-    return Response(status=200)
+	Alert_Data.insert_one(inputData)
+	return Response(status=200)
 
 
 #Org login
 @app.route('/org_login', methods=['POST'])
 def org_login():
-    Org_Data = pymongo.collection.Collection(db, 'Org_Data')
-    inputData = dict(request.form)
-    for i in json.loads(dumps(Org_Data.find())):
-        if i['email'] == inputData['email'] and i['password'] == inputData['password']:
-            session['email'] = inputData['email']
-            return render_template('orgdashboard.html')
-    return Response(status=403)
+	Org_Data = pymongo.collection.Collection(db, 'Org_Data')
+	inputData = dict(request.form)
+	for i in json.loads(dumps(Org_Data.find())):
+		if i['email'] == inputData['email'] and i['password'] == inputData['password']:
+			session['email'] = inputData['email']
+			return render_template('orgdashboard.html')
+	return Response(status=403)
 
 #Org landing page
 @app.route('/org_dash')
