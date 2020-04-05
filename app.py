@@ -35,3 +35,8 @@ def add_new_user():
     Donor_Data = pymongo.collection.Collection(db, 'Donor_Data')
     Donor_Data.insert_one(inputData)
     return Response(status=200)
+
+#Add new Org
+@app.route('/add_new_org')
+def add_new_org():
+    return render_template('page1.html')
