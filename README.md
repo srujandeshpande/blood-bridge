@@ -3,11 +3,11 @@ The One stop solution connecting blood donors and organizations. https://blood-b
 Blood Bridge eases the stress on the healthcare industry by making it easy for donors to donate and making sure that those who need blood can easily get it.  
 
 ## Features
-* Blood Bridge connects prospective donors with blood banks and donation camps in their area
-* Blood Bridge allows blood banks and hospitals to communicate supply and demand with each other
-* Blood Bridge lets organizations put out alerts for particular types of blood urgently needed
-* Blood Bridge allows organizations to set up Blood Donation Drives and make then visible to the public
-* Blood Bridge connects organizations with registered donors
+* Blood Bridge connects Prospective Donors with Blood Banks and Donation Camps in their area
+* Blood Bridge allows Blood banks and Hospitals to communicate supply and demand with each other
+* Blood Bridge lets Organizations put out Alerts for particular types of Blood urgently needed
+* Blood Bridge allows Organizations to set up Blood Donation Drives and make then visible to the public
+* Blood Bridge connects Organizations with Registered Donors
 
 ## Donor's Application Usage https://blood-bridge.herokuapp.com/ 
 * You can register as a donor on the main page
