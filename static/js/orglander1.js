@@ -17,7 +17,7 @@ $(function(){
   });
 
   $('#orgLoginForm').submit(function(e){
-      e.preventDefault();
+      //e.preventDefault();
       $.ajax({
           url:'/org_login',
           type:'post',
@@ -25,6 +25,7 @@ $(function(){
           success:function(){
               $('#orgLoginSuccess').removeAttr('hidden');
               $('#orgLoginForm')[0].reset();
+              $(location).attr('href', '/org_dash')
           },
           error:function(){
               $('#orgLoginFailure').removeAttr('hidden');

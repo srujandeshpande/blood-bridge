@@ -59,5 +59,10 @@ def org_login():
     inputData = dict(request.form)
     for i in json.loads(dumps(Org_Data.find())):
         if i['email'] == inputData['email'] and i['password'] == inputData['password']:
-            return Response(status=200)
+            return render_template('orgdashboard.html')
     return Response(status=403)
+
+#Org landing page
+@app.route('/org_dash')
+def org_dash():
+    return render_template('orgdashboard.html')
