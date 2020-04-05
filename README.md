@@ -1,5 +1,5 @@
 # Blood Bridge
-The One stop solution connecting blood donors and organizations. https://blood-bridge.herokuapp.com/  
+**The One stop solution connecting blood donors and organizations. https://blood-bridge.herokuapp.com/**  
 Blood Bridge eases the stress on the healthcare industry by making it easy for donors to donate and making sure that those who need blood can easily get it.  
 
 ## Features
